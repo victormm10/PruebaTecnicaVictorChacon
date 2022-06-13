@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="m-3" ng-init="Init();">
+    <h1>Listado de Usuarios</h1>
+
+
+    <div class="row g-2">
+        <div class="col-12 col-md-6 col-lg-4 col-xxl-6" ng-repeat="item in ListaUsuarios">
+            <div class="p-3 border bg-light">
+                <div class="row align-items-center">
+                    <div class="col-12 col-xxl-1 text-center">
+                        <img src="~/images/usericon.png" class="profile" />
+                    </div>
+                    <div class="col-12 col-xxl-6 text-center">
+                        <h4>{{item.name}}</h4>
+                    </div>
+                    <div class="col-12 col-xxl-3 text-center">
+                        <a href="Home/Posts/{{item.id}}">Ver Publicaciones</a>
+                    </div>
+                    <div class="col-12 col-xxl-2 text-center">
+                        <a href="Home/Albums/{{item.id}}">Ver Fotos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

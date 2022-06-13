@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<div class="m-3" ng-init="InitPosts();">
+    <h1>Publicaciones de {{MyUser.name}}</h1>
+
+    <div class="row">
+        <div class="col-12 col-xl-6" ng-repeat="item in ListaPosts">
+            <div class="card border-info m-3">
+                <div class="card-header"><h5 class="card-title">{{item.title}}</h5></div>
+                <div class="card-body">
+                    <p class="card-text">{{item.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

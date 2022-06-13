@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<div class="m-3" ng-init="InitLogsTransactions();">
+    <h1>Log de Transacciones</h1>
+
+    <div class="row">
+        <div class="col-12 mb-3" ng-repeat="item in ListaTransactions">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Evento : </strong> {{item.evento}}
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>{{item.descripcion}}</p>
+                        <footer class="blockquote-footer">Fecha de transacci&oacute;n : <cite title="Fecha de Transacciones">{{item.fechaRegistro | date: 'dd/MM/yyyy HH:mm:ss'}}</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
